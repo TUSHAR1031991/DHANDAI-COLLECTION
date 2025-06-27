@@ -104,4 +104,60 @@
 
     footer {
       background: #6e0f0f;
-      color: #fff
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    img, video { max-width: 100%; height: auto; }
+
+    /* Larger screens */
+    @media (min-width: 768px) {
+      nav a { flex: 1 1 150px; }
+      .shop-header h2 { font-size: calc(2rem + 1vw); }
+    }
+    @media (min-width: 1024px) {
+      header { padding: calc(2rem + 1vw); }
+      .products { gap: 2rem; padding: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dhandai Collection</h1>
+    <p>Premium Sarees & Textile Materials</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="shop-header">
+    <h2>Shop Our Latest Collection</h2>
+    <p>Beautifully crafted sarees and textiles from our 2025 collection</p>
+  </div>
+
+  <section class="products">
+    <!-- Product cards unchanged -->
+    <div class="product-card">
+      <img src="..." alt="Silk Saree" />
+      <div class="product-info">
+        <h3>Royal Banarasi Silk Saree</h3>
+        <p>Elegant maroon silk saree with gold embroidery</p>
+        <div class="price">₹5,499</div>
+      </div>
+    </div>
+    <!-- ... more cards ... -->
+  </section>
+
+  <footer>
+    &copy; 2025 Dhandai Collection. All rights reserved.
+  </footer>
+
+</body>
+</html>
