@@ -5,121 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shop | Dhandai Collection</title>
   <style>
-    /* Global & fluid base */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 100%; }
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #fff8f0;
+      background-color: #fff8f0;
       color: #333;
-      font-size: calc(0.9rem + 0.2vw);
     }
 
     header {
-      background: #6e0f0f;
-      color: #fff;
+      background-color: #6e0f0f;
+      color: white;
+      padding: 30px 20px;
       text-align: center;
-      padding: calc(1.5rem + 1vw);
     }
 
     nav {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      background: #8c1c13;
+      background-color: #8c1c13;
     }
+
     nav a {
-      flex: 1 1 120px;
-      padding: 0.75rem 1rem;
-      color: #fff;
-      font-weight: bold;
+      padding: 15px 25px;
+      color: white;
       text-decoration: none;
-      text-align: center;
+      font-weight: bold;
     }
-    nav a:hover { background: #a62d1f; }
+
+    nav a:hover {
+      background-color: #a62d1f;
+    }
 
     .shop-header {
       text-align: center;
-      padding: calc(2rem + 1vw) 1rem 1rem;
+      padding: 50px 20px 10px;
     }
+
     .shop-header h2 {
-      font-size: calc(1.5rem + 1vw);
-    }
-    .shop-header p {
-      font-size: 1rem;
-      margin-top: 0.25rem;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
 
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
-      gap: 1.5rem;
-      padding: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 40px;
       max-width: 1200px;
       margin: auto;
     }
 
     .product-card {
-      background: #fff;
+      background-color: white;
       border: 1px solid #eee;
       border-radius: 10px;
-      overflow: hidden;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      display: flex;
-      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.2s ease;
     }
+
     .product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transform: scale(1.02);
     }
+
     .product-card img {
       width: 100%;
-      height: auto;
-      aspect-ratio: 4/3;
+      height: 300px;
       object-fit: cover;
     }
+
     .product-info {
-      padding: 1rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      padding: 15px;
       text-align: center;
     }
+
     .product-info h3 {
+      margin: 10px 0;
       font-size: 1.1rem;
       color: #6e0f0f;
-      margin-bottom: 0.5rem;
     }
+
     .product-info p {
       color: #555;
       font-size: 0.95rem;
-      margin-bottom: 1rem;
     }
+
     .price {
-      font-weight: bold;
       color: #000;
+      font-weight: bold;
+      margin-top: 10px;
     }
 
     footer {
-      background: #6e0f0f;
-      color: #fff;
+      background-color: #6e0f0f;
+      color: white;
+      padding: 20px;
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-
-    img, video { max-width: 100%; height: auto; }
-
-    /* Larger screens */
-    @media (min-width: 768px) {
-      nav a { flex: 1 1 150px; }
-      .shop-header h2 { font-size: calc(2rem + 1vw); }
-    }
-    @media (min-width: 1024px) {
-      header { padding: calc(2rem + 1vw); }
-      .products { gap: 2rem; padding: 2rem; }
     }
   </style>
 </head>
@@ -143,14 +124,6 @@
   </div>
 
   <section class="products">
-    <!-- Product cards unchanged -->
-    <div class="product-card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8yX6ejy1PnvKEscdDdBqKkBcBNzDKykOYQ&s" alt="Silk Saree" />
-      <div class="product-info">
-        <h3>Royal Banarasi Silk Saree</h3>
-        <p>Elegant maroon silk saree with gold embroidery</p>
-        <div class="price">₹5,499</div>
- <section class="products">
     <div class="product-card">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8yX6ejy1PnvKEscdDdBqKkBcBNzDKykOYQ&s" alt="Silk Saree" />
       <div class="product-info">
@@ -185,9 +158,7 @@
         <p>Pure silk material - 1 meter</p>
         <div class="price">₹799/m</div>
       </div>
-      </div>
     </div>
-    <!-- ... more cards ... -->
   </section>
 
   <footer>
