@@ -5,165 +5,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shop | Dhandai Collection</title>
   <style>
+    /* Global & fluid base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 100%; }
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fff8f0;
+      background: #fff8f0;
       color: #333;
+      font-size: calc(0.9rem + 0.2vw);
     }
 
     header {
-      background-color: #6e0f0f;
-      color: white;
-      padding: 30px 20px;
+      background: #6e0f0f;
+      color: #fff;
       text-align: center;
+      padding: calc(1.5rem + 1vw);
     }
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      background-color: #8c1c13;
+      background: #8c1c13;
     }
-
     nav a {
-      padding: 15px 25px;
-      color: white;
-      text-decoration: none;
+      flex: 1 1 120px;
+      padding: 0.75rem 1rem;
+      color: #fff;
       font-weight: bold;
+      text-decoration: none;
+      text-align: center;
     }
-
-    nav a:hover {
-      background-color: #a62d1f;
-    }
+    nav a:hover { background: #a62d1f; }
 
     .shop-header {
       text-align: center;
-      padding: 50px 20px 10px;
+      padding: calc(2rem + 1vw) 1rem 1rem;
     }
-
     .shop-header h2 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+      font-size: calc(1.5rem + 1vw);
+    }
+    .shop-header p {
+      font-size: 1rem;
+      margin-top: 0.25rem;
     }
 
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      padding: 40px;
+      grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+      gap: 1.5rem;
+      padding: 1.5rem;
       max-width: 1200px;
       margin: auto;
     }
 
     .product-card {
-      background-color: white;
+      background: #fff;
       border: 1px solid #eee;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
       overflow: hidden;
-      transition: transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
     }
-
     .product-card:hover {
-      transform: scale(1.02);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     }
-
     .product-card img {
       width: 100%;
-      height: 300px;
+      height: auto;
+      aspect-ratio: 4/3;
       object-fit: cover;
     }
-
     .product-info {
-      padding: 15px;
+      padding: 1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       text-align: center;
     }
-
     .product-info h3 {
-      margin: 10px 0;
       font-size: 1.1rem;
       color: #6e0f0f;
+      margin-bottom: 0.5rem;
     }
-
     .product-info p {
       color: #555;
       font-size: 0.95rem;
+      margin-bottom: 1rem;
     }
-
     .price {
-      color: #000;
       font-weight: bold;
-      margin-top: 10px;
+      color: #000;
     }
 
     footer {
-      background-color: #6e0f0f;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Dhandai Collection</h1>
-    <p>Premium Sarees & Textile Materials</p>
-  </header>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="shop.html">Shop</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <div class="shop-header">
-    <h2>Shop Our Latest Collection</h2>
-    <p>Beautifully crafted sarees and textiles from our 2025 collection</p>
-  </div>
-
-  <section class="products">
-    <div class="product-card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8yX6ejy1PnvKEscdDdBqKkBcBNzDKykOYQ&s" alt="Silk Saree" />
-      <div class="product-info">
-        <h3>Royal Banarasi Silk Saree</h3>
-        <p>Elegant maroon silk saree with gold embroidery</p>
-        <div class="price">₹5,499</div>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <img src="https://wholetex.sgp1.cdn.digitaloceanspaces.com/full/vipul-tulsi-vol-7-fancy-saree-671.jpg" alt="Cotton Saree" />
-      <div class="product-info">
-        <h3>Handloom Cotton Saree</h3>
-        <p>Soft cotton saree with traditional patterns</p>
-        <div class="price">₹2,799</div>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYGbrZ3QUiR0GpCVIOG1rOP6ny8GbO9utL2w&s" alt="Designer Saree" />
-      <div class="product-info">
-        <h3>Modern Designer Saree</h3>
-        <p>Perfect blend of tradition and fashion</p>
-        <div class="price">₹6,299</div>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmDE5iaKLhsMYofP1WH6LaCgK1UblGZgsGSA&s" alt="Fabric Material" />
-      <div class="product-info">
-        <h3>Premium Silk Fabric</h3>
-        <p>Pure silk material - 1 meter</p>
-        <div class="price">₹799/m</div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Dhandai Collection. All rights reserved.
-  </footer>
-
-</body>
-</html>
+      background: #6e0f0f;
+      color: #fff
